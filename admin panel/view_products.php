@@ -34,7 +34,7 @@
     <?php include '../components/admin_header.php'; ?>
     <section class="show-post">
         <div class="heading">
-            <h1>Sus productos</h1>
+            <h1>productos</h1>
             <img src="../image/separator-img.png" alt="imagen de control">
         </div>
         

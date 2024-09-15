@@ -64,7 +64,7 @@
                 ?>
                 <h3><?= $number_of_products; ?></h3>
                 <p>productos agregados</p>
-                <a href="add_product.php" class="btn">agregar producto</a>
+                <a href="add_products.php" class="btn">agregar producto</a>
             </div>
 
             <div class="box">
@@ -75,8 +75,8 @@
                     $number_of_active_products = $select_active_products->rowCount();
                 ?>
                 <h3><?= $number_of_active_products; ?></h3>
-                <p>Todos los productos disponibles</p>
-                <a href="view_product.php" class="btn">ver producto</a>
+                <p>productos disponibles</p>
+                <a href="view_products.php" class="btn">ver producto</a>
             </div>
 
             <div class="box">
@@ -87,8 +87,8 @@
                     $number_of_deactive_products = $select_deactive_products->rowCount();
                 ?>
                 <h3><?= $number_of_deactive_products; ?></h3>
-                <p>total de productos en borrador</p>
-                <a href="view_product.php" class="btn">productos en borrador</a>
+                <p>productos en borrador</p>
+                <a href="view_products.php" class="btn">productos en borrador</a>
             </div>
 
             <div class="box">
