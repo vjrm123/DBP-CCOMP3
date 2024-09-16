@@ -144,7 +144,7 @@
 
                 <div class="input-field">
                     <p>detalles del producto</p>
-                    <textarea name="description" required maxlength="1000" placeholder="agrega detalles del producto" class="box"></textarea>
+                    <textarea name="description" required maxlength="1000" placeholder="  agrega detalles del producto" class="box"></textarea>
                 </div>
 
                 <div class="input-field">

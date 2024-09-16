@@ -31,6 +31,7 @@
 <body>
     <div class="main-container">
     <?php include '../components/admin_header.php'; ?>
+    
     <section class="control">
         <div class="heading">
             <h1>control</h1>

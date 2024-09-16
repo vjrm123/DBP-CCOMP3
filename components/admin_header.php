@@ -17,8 +17,8 @@
                 <img src="../Archivos_subidos/<?= $fetch_profile['image']; ?>" class="logo-img" width="150" alt="perfil">
                 <p><?=$fetch_profile['name']; ?></p>
                 <div class="flex-btn">
-                    <a href="profile.php" class="btn">profile</a>
-                    <a href="../components/admin_cerrar_sesion.php" onclick="return confirm('logout from this website');" class="btn">cerrar sesion</a>
+                    <a href="profile.php" class="btn">perfil</a>
+                    <a href="../components/admin_cerrar_sesion.php" onclick="return confirm('Cerrar sesión en este sitio web');" class="btn">cerrar sesion</a>
                 </div>
         </div>
         <?php }?>

@@ -31,8 +31,10 @@
 /*-------------------------------------*/
 
 body{
-    background-position: center;
-    background-color: #f8fafc;
+    background-image: url("../image/bg1.webp");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 html{
@@ -252,7 +254,7 @@ section,
     padding: 1rem;
 }
 .form-container form textarea{
-    height: 20rem;
+    height: 8rem;
     resize: none;
 }
 
@@ -469,6 +471,12 @@ header .rigth{
 /*-------------------------------------*/
 /*            control .php          */
 /*-------------------------------------*/
+.control{
+    background-image: url("../image/bg1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .control .box-container .box{
     text-align: center;
