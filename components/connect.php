@@ -9,7 +9,7 @@
 
     $dsn = "mysql:host=" . host . ";dbname=" . db . ";" . charset;
 
-    $conn = new PDO($dsn, user, pass);
+    $conn = new PDO($dsn,user, pass);
 
 
     function unique_id(){

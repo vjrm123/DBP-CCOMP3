@@ -1,3 +1,5 @@
+
+
 <header>
     <div class="logo">
         <img src="../image/logo.png" width="50" alt="logo">
@@ -17,8 +19,8 @@
                 <img src="../Archivos_subidos/<?= $fetch_profile['image']; ?>" class="logo-img" width="150" alt="perfil">
                 <p><?=$fetch_profile['name']; ?></p>
                 <div class="flex-btn">
-                    <a href="profile.php" class="btn">perfil</a>
-                    <a href="../components/admin_cerrar_sesion.php" onclick="return confirm('Cerrar sesión en este sitio web');" class="btn">cerrar sesion</a>
+                    <a href="profile.php" class="btn"><strong>perfil</strong></a>
+                    <a href="../components/admin_cerrar_sesion.php" onclick="return confirm('Cerrar sesión');" class="btn"><strong>cerrar sesion</strong></a>
                 </div>
         </div>
         <?php }?>
@@ -41,14 +43,14 @@
         <h5>menu</h5>
         <div class="navbar">
             <ul>
-                <li><a href="control.php"><i class="bx bxs-home-smile"></i> Control</a></li>
-                <li><a href="add_products.php"><i class="bx bxs-shopping-bags"></i> Agregar productos</a></li>
-                <li><a href="view_products.php"><i class="bx bxs-food-menu"></i> Ver productos</a></li>
-                <li><a href="cuenta_usuario.php"><i class="bx bxs-user-detail"></i> Cuenta de usuario</a></li>
-                <li><a href="../components/admin_cerrar_sesion.php" onclick="return confirm('logout from this website');"><i class="bx bx-log-out"></i> Cerrar sesión</a></li>
+                <li><a href="control.php"><i class="bx bxs-home-smile"></i> <strong>Control</strong></a></li>
+                <li><a href="add_products.php"><i class="bx bxs-shopping-bags"></i> <strong>Agregar productos</strong></a></li>
+                <li><a href="view_products.php"><i class="bx bxs-food-menu"></i> <strong>Ver productos</strong></a></li>
+                <li><a href="cuenta_usuario.php"><i class="bx bxs-user-detail"></i> <strong>Cuenta de usuario</strong></a></li>
+                <li><a href="../components/admin_cerrar_sesion.php" onclick="return confirm('Cerrar sesión'); "><i class="bx bx-log-out"></i> <strong>Cerrar sesión</strong></a></li>
             </ul>
         </div>
-        <h5>encuentranos en: </h5>
+        <h5>Nuestras redes socociales: </h5>
         <div class="social-links">
             <i class="bx bxl-facebook"></i>
             <i class="bx bxl-instagram"></i>

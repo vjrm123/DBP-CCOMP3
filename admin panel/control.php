@@ -43,7 +43,7 @@
             <div class="box">
                 <h3>Bienvenido</h3>
                 <p><?= $fetch_profile['name']; ?></p>
-                <a href="update.php" class="btn">actualisar perfil</a>
+                <a href="update.php" class="btn"><strong>actualisar perfil</strong></a>
             </div>
 
             <div class="box">
@@ -54,18 +54,18 @@
                 ?>
                 <h3><?= $number_of_msg; ?></h3>
                 <p>Mensaje no leido</p>
-                <a href="admin_message.php" class="btn">ver mensage</a>
+                <a href="admin_message.php" class="btn"><strong>ver mensajes</strong></a>
             </div>
 
             <div class="box">
                 <?php
-                    $select_products = $conn->prepare("SELECT * FROM `products` WHERE seller_id = ?");
+                    $select_products = $conn->prepare("SELECT * FROM products WHERE seller_id = ?");
                     $select_products->execute([$seller_id]);
                     $number_of_products = $select_products->rowCount();
                 ?>
                 <h3><?= $number_of_products; ?></h3>
                 <p>productos agregados</p>
-                <a href="add_products.php" class="btn">agregar producto</a>
+                <a href="add_products.php" class="btn"><strong>agregar producto</strong></a>
             </div>
 
             <div class="box">
@@ -77,7 +77,7 @@
                 ?>
                 <h3><?= $number_of_active_products; ?></h3>
                 <p>productos disponibles</p>
-                <a href="view_products.php" class="btn">ver producto</a>
+                <a href="view_products.php" class="btn"><strong>ver producto</strong></a>
             </div>
 
             <div class="box">
@@ -89,7 +89,7 @@
                 ?>
                 <h3><?= $number_of_deactive_products; ?></h3>
                 <p>productos en borrador</p>
-                <a href="view_products.php" class="btn">productos en borrador</a>
+                <a href="view_products.php" class="btn"><strong>productos en borrador</strong></a>
             </div>
 
             <div class="box">
@@ -100,7 +100,7 @@
                 ?>
                 <h3><?= $number_of_users; ?></h3>
                 <p>cuenta de usuarios</p>
-                <a href="users_accounts.php" class="btn">ver usuarios</a>
+                <a href="users_accounts.php" class="btn"><strong>ver usuarios</strong></a>
             </div>
 
             <div class="box">
@@ -111,7 +111,7 @@
                 ?>
                 <h3><?= $number_of_sellers; ?></h3>
                 <p>cuenta de vendedores</p>
-                <a href="sellers_accounts.php" class="btn">ver vendedores</a>
+                <a href="sellers_accounts.php" class="btn"><strong>ver vendedores</strong></a>
             </div>
 
             <div class="box">
@@ -122,7 +122,7 @@
                 ?>
                 <h3><?= $number_of_orders; ?></h3>
                 <p>total de pedidos</p>
-                <a href="admin_order.php" class="btn">total de pedidos</a>
+                <a href="admin_order.php" class="btn"><strong>total de pedidos</strong></a>
             </div>
 
             <div class="box">
@@ -133,7 +133,7 @@
                 ?>
                 <h3><?= $number_of_confirm_orders; ?></h3>
                 <p>pedidos confirmados</p>
-                <a href="admin_order.php" class="btn">confirmar pedidos</a>
+                <a href="admin_order.php" class="btn"><strong>confirmar pedidos</strong></a>
             </div>
 
             <div class="box">
@@ -145,7 +145,7 @@
                 <h3><?= $number_of_canceled_orders; ?></h3>
                 <p>total  de pedidos cancelados</p>
 
-                <a href="admin_order.php" class="btn">pedidos cancelados</a>
+                <a href="admin_order.php" class="btn"><strong>pedidos cancelados</strong></a>
             </div>
 
         </div>

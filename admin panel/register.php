@@ -63,7 +63,7 @@
         <div class="flex">
             <div class="col">
                 <div class="input-field">
-                    <p>Su nombre <span>*</span></p>
+                    <p>Nombre <span>*</span></p>
                     <input type="text" name="name" placeholder="Introduce tu nombre" maxlength="50" required class="box">
                 </div>
                 <div class="input-field">
@@ -86,8 +86,9 @@
             <p>perfil<span>*</span></p>
             <input type="file" name="image" accept="image/*" required class="box">
         </div>
-        <p class ="link">¿Ya tienes una cuenta?<span>*</span><a href="login.php">  Iniciar sesión ahora</a></p>
-        <input type="submit" name="submit" value="enviar" class="btn">
+        <p class ="link" >¿Ya tienes una cuenta?<span>*</span><a href="login.php">  Iniciar sesión ahora</a></p>
+        <input type="submit" name="submit" value="enviar" class = "btn">
+        
     </form>
 </div>
 

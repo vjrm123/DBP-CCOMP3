@@ -127,33 +127,33 @@
     <?php include '../components/admin_header.php'; ?>
     <section class="post-editor">
         <div class="heading">
-            <h1>agregar pproductos</h1>
+            <h1>agregar productos<span>*</span></h1>
             <img src="../image/separator-img.png" alt="imagen de control">
         </div>
         <div class="form-container">
             <form action="" method="post" enctype="multipart/form-data" class="register">
                 <div class="input-field">
-                    <p>Nombre del producto</p>
+                    <p><strong>Nombre del producto</strong><span>*</span></p>
                     <input type="text" name="name" maxlenth="100" placeholder="agrega el nombre del producto" required class="box">
                 </div>
 
                 <div class="input-field">
-                    <p>precio del producto</p>
+                    <p><strong>precio del producto</strong><span>*</span></p>
                     <input type="number" name="price" maxlenth="100" placeholder="agrega precio del producto" required class="box">
                 </div>
 
                 <div class="input-field">
-                    <p>detalles del producto</p>
+                    <p><strong>detalles del producto</strong><span>*</span></p>
                     <textarea name="description" required maxlength="1000" placeholder="  agrega detalles del producto" class="box"></textarea>
                 </div>
 
                 <div class="input-field">
-                    <p>Stock del producto</p>
+                    <p><strong>Stock del producto</strong><span>*</span></p>
                     <input type="number" name="stock" maxlenth="10" min="0" max="999999999" placeholder="agrega stock del producto" required class="box">
                 </div>
 
                 <div class="input-field">
-                    <p>imagen del producto</p>
+                    <p><strong>imagen del producto</strong><span>*</span></p>
                     <input type="file" name="image" accept="image/*" required class="box">
                 </div>
 

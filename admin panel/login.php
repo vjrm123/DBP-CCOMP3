@@ -42,14 +42,14 @@
         <h3>Iniciar sesión ahora</h3>
         <div class="input-field">
             <p>correo electrónico<span>*</span></p>
-            <input type="email" name="email" placeholder="enter your email" maxlength="50" required class="box" >
+            <input type="email" name="email" placeholder="Introduce tu correo electrónico" maxlength="50" required class="box" >
         </div>
         <div class="input-field">
                 <p>contraseña<span>*</span></p>
-                <input type="password" name="pass" placeholder="enter your password" maxlength="50" required class="box">
+                <input type="password" name="pass" placeholder="Ingrese su contraseña" maxlength="50" required class="box">
         </div>
         <p class ="link">¿No tienes una cuenta?<span>*</span><a href="register.php">  Regístrate ahora</a></p>
-        <input type="submit" name="submit" value="login now" class="btn">
+        <input type="submit" name="submit" value="Iniciar sesión" class="btn">
     </form>
 </div>
 

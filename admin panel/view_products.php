@@ -4,13 +4,21 @@
     // Verificar si la cookie 'seller_id' está presente
     if(isset($_COOKIE['seller_id'])){
         $seller_id = $_COOKIE['seller_id'];
-
-        // Opcional: Verificar si el seller_id es válido en la base de datos
-        $select_seller = $conn->prepare("SELECT * FROM sellers WHERE id = ?");
-        $select_seller->execute([$seller_id]);
     } else {
         $seller_id='';
         header('location:login.php');
+    }
+
+    //eliminar producto
+    if(isset($_POST['delete'])){
+        $p_id = $_POST['product_id'];
+        $p_id = filter_var($p_id, FILTER_SANITIZE_STRING);
+
+        $delete_product = $conn->prepare("DELETE FROM products WHERE id = ?");
+        $delete_product->execute([$p_id]);
+
+        $success_msg[] = 'producto eliminado exitosamente';
+
     }
 ?>
 
@@ -62,7 +70,7 @@
                     <div class="flex-btn">
                         <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" class="btn">editar</a>
                         <button type="submit" name="delete" class="btn" onclick="return confirm('eliminar este producto?');">borar</button>
-                        <a href="read_product.php?pos_id=<?= $fetch_products['id']; ?>" class="btn">leer producto</a>
+                        <a href="read_products.php?pos_id=<?= $fetch_products['id']; ?>" class="btn"><strong>leer producto</strong></a>
                     </div>
                 </div>
             </form>
