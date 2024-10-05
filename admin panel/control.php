@@ -34,7 +34,7 @@
     
     <section class="control">
         <div class="heading">
-            <h1>control</h1>
+            <h1>Panel de control</h1>
             <img src="../image/separator-img.png" alt="imagen de control">
         </div>
 

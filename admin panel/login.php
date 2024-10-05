@@ -1,13 +1,12 @@
-<?php
+<?php 
     include '../components/connect.php';
 
     if(isset($_POST['submit'])) {
 
         $email = $_POST['email'];
-        $email = filter_var($email, FILTER_SANITIZE_STRING);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL); 
 
         $pass = sha1($_POST['pass']);
-        $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
         $select_seller = $conn->prepare("SELECT * FROM sellers WHERE email = ? AND password = ?");
         $select_seller->execute([$email, $pass]);
@@ -17,7 +16,7 @@
             setcookie('seller_id', $row['id'], time() + 60*60*24*30, '/');
             header('location:control.php');
         } else{
-            $warning_msg[] = 'incorrecto email o contraseña';
+            $warning_msg[] = 'Correo electrónico o contraseña incorrectos';
         }
     }
 ?>

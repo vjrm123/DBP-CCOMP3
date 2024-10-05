@@ -1,11 +1,9 @@
 <?php
     include '../components/connect.php';
-
-    // Verificar si la cookie 'seller_id' está presente
+    
     if(isset($_COOKIE['seller_id'])){
         $seller_id = $_COOKIE['seller_id'];
 
-        // Opcional: Verificar si el seller_id es válido en la base de datos
         $select_seller = $conn->prepare("SELECT * FROM sellers WHERE id = ?");
         $select_seller->execute([$seller_id]);
     } else {

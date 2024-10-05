@@ -8,13 +8,11 @@
         $name = filter_var($name , FILTER_SANITIZE_STRING);
 
         $email = $_POST['email'];
-        $email = filter_var($email, FILTER_SANITIZE_STRING);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL); 
 
-        $pass = $_POST['pass'];
-        $pass = sha1($pass, FILTER_SANITIZE_STRING);
+        $pass = sha1($_POST['pass']);
 
-        $cpass = $_POST['pass'];
-        $cpass = sha1($cpass, FILTER_SANITIZE_STRING);
+        $cpass = sha1($_POST['cpass']);
 
         $image = $_FILES['image']['name'];
         $image = filter_var($image, FILTER_SANITIZE_STRING);
@@ -33,14 +31,16 @@
             if($pass != $cpass){
                 $warning_msg[] = '¡Las contraseñas no coinciden!';
             } else {
+                // Insertar nuevo usuario
                 $insert_seller = $conn->prepare("INSERT INTO sellers (id, name, email, password, image) VALUES (?, ?, ?, ?, ?)");
-                $insert_seller->execute([$id, $name, $email, $cpass, $rename]);
+                $insert_seller->execute([$id, $name, $email, $pass, $rename]); // Aquí debes guardar $pass
                 move_uploaded_file($image_tmp_name, $image_folder);
                 $success_msg[] = 'Nuevo vendedor registrado, por favor inicie sesión ahora';
             }
         }
     }
 ?>
+
 
 
 <!DOCTYPE html>

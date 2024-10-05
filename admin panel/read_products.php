@@ -69,7 +69,7 @@
                     <div class="price">$<?= $fetch_product['price']; ?></div>
                     <div class="title"><?= $fetch_product['name']; ?></div>
                     <div class="content"><?= $fetch_product['product_detail']; ?></div>
-                    <div class="felx-btn"><a href="edit_product.php?id=<?= $fetch_product['id']; ?>" class="btn">editar</a>
+                    <div class="flex-btn"><a href="edit_product.php?id=<?= $fetch_product['id']; ?>" class="btn">editar</a>
                         <button type="submit" name="delete" class="btn" onclick="return confirm('eliminar este producto');">borrar</button>
                         <a href="view_products.php?pos_id=<?= $fetch_product['id']; ?>" class="btn">volver</a>
                     </div>
