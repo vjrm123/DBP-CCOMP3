@@ -8,6 +8,16 @@ if(isset($_COOKIE['seller_id'])){
     header('location:login.php');
 }
 
+if(isset($_POST['delete'])){
+    $p_id = $_POST['product_id'];
+    $p_id = filter_var($p_id, FILTER_SANITIZE_STRING);
+
+    $delete_product = $conn->prepare("DELETE FROM products WHERE id = ?");
+    $delete_product->execute([$p_id]);
+
+    $success_msg[] = 'producto eliminado exitosamente';
+}
+
 if(isset($_GET['query'])){
     $search_query = $_GET['query'];
     $search_query = filter_var($search_query, FILTER_SANITIZE_STRING);
@@ -51,7 +61,7 @@ if(isset($_GET['query'])){
                     <div class="price">$<?= $fetch_products['price']; ?></div>
 
                     <div class="content">
-                        <div class="title"> <?= $fetch_products['name']; ?> </div>
+                        <div class="title"><strong><?= $fetch_products['name']; ?></strong>  </div>
                         <p><?= $fetch_products['product_detail']; ?></p>
                         <div class="flex-btn">
                             <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" class="btn">editar</a>
