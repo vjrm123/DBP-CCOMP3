@@ -70,26 +70,24 @@
 
             <div class="box">
                 <?php
-                    $select_active_products = $conn->prepare("SELECT * FROM `products` WHERE seller_id = ?  AND status = ?");
-
+                    $select_active_products = $conn->prepare("SELECT * FROM `products` WHERE seller_id = ? AND status = ?");
                     $select_active_products->execute([$seller_id, 'active']);
                     $number_of_active_products = $select_active_products->rowCount();
                 ?>
                 <h3><?= $number_of_active_products; ?></h3>
                 <p>productos disponibles</p>
-                <a href="view_products.php" class="btn"><strong>ver producto</strong></a>
+                <a href="view_products.php?status=active" class="btn"><strong>ver productos disponibles</strong></a>
             </div>
 
             <div class="box">
                 <?php
-                    $select_deactive_products = $conn->prepare("SELECT * FROM `products` WHERE seller_id = ?  AND status = ?");
-
+                    $select_deactive_products = $conn->prepare("SELECT * FROM `products` WHERE seller_id = ? AND status = ?");
                     $select_deactive_products->execute([$seller_id, 'deactive']);
                     $number_of_deactive_products = $select_deactive_products->rowCount();
                 ?>
                 <h3><?= $number_of_deactive_products; ?></h3>
                 <p>productos en borrador</p>
-                <a href="view_products.php" class="btn"><strong>productos en borrador</strong></a>
+                <a href="view_products.php?status=deactive" class="btn"><strong>ver productos en borrador</strong></a>
             </div>
 
             <div class="box">

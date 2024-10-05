@@ -12,7 +12,6 @@ if(isset($_GET['query'])){
     $search_query = $_GET['query'];
     $search_query = filter_var($search_query, FILTER_SANITIZE_STRING);
 
-    // Consulta para buscar productos por nombre o descripción
     $search_products = $conn->prepare("SELECT * FROM products WHERE seller_id = ? AND (name LIKE ? OR product_detail LIKE ?)");
     $search_products->execute([$seller_id, "%$search_query%", "%$search_query%"]);
 }
@@ -56,6 +55,7 @@ if(isset($_GET['query'])){
                         <p><?= $fetch_products['product_detail']; ?></p>
                         <div class="flex-btn">
                             <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" class="btn">editar</a>
+                            <button type="submit" name="delete" class="btn" onclick="return confirm('eliminar este producto?');">borar</button>
                         </div>
                     </div>
                 </form>
